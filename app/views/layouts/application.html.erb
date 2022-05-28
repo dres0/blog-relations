@@ -12,6 +12,7 @@
   <body class="container">
     <% if current_user %>
       <p>Hello <%= current_user.email %>!</p>
+      <p>Eres editor? <%= current_user.editor %>!</p>
       <p><%= link_to "Cerrar sesion", destroy_user_session_path, 'data-turbo-method': :delete %></p>
     <% else %>
       <p>No has iniciado sesion aun!!!</p>
